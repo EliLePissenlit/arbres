@@ -1,27 +1,7 @@
-version: '3.8'
-
 services:
-  mongodb:
+  mongo:
     image: mongo:latest
-    container_name: mongodb
-    restart: unless-stopped
+    container_name: arbres
     ports:
-      - "27017:27017"
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: password
-      MONGO_INITDB_DATABASE: cours2
-    volumes:
-      - mongodb_data:/data/db
-      - mongodb_config:/data/configdb
-    networks:
-      - mongodb_network
-
-volumes:
-  mongodb_data:
-  mongodb_config:
-
-networks:
-  mongodb_network:
-    driver: bridge
+      - "27019:27017"
 
